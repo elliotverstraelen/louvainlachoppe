@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> LouvainLaChoppe </title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"/>
+		<link rel="stylesheet" href="css\history_page.css"/>
+		<!-- CSS -->
+
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+		<!-- Font -->
+
+	</head>
+	<body>
+		<!-- header -->
+		<div class="block">
+			<header class="header">
+				<!-- logo -->
+				<div class="logo">
+					<a href='/' class="header-logo">
+						Louvain-La-Choppe
+					</a>
+				</div>
+				<!-- logo -->
+				
+				<div class="header-menu">
+					<!-- search -->
+					<div class="search">
+						<form  method="get" action="/search">
+							<input type="search" id="search" name="search" placeholder=" 🔍  Rechercher ..."/>
+						</form>
+					</div>
+					<!-- search -->
+					<!-- connexion -->
+					<form class="connexion" id="con" method="get" action="connexion">
+						<a href="javascript:{}" onclick="document.getElementById('con').submit();">
+							{{connexion}}
+						</a>
+					</form>
+					<!-- connexion -->
+					<!-- pseudo -->
+					<div class="pseudo">
+						<a href="profil_page"><h3>{{pseudo_user}}</h3></a>
+					</div>
+					<!-- pseudo -->
+				</div>
+			</header>	
+		</div>
+		<!-- header -->
+
+		<!-- banner -->
+		<div class="block">
+			<div class="banner">
+				<!-- background -->
+				<img src="img\background.jpg" alt="background" class="banner-img">
+				<!-- background -->
+			</div>
+		</div>
+		<!-- banner -->
+
+		<!-- boddy -->
+		<div class="table">
+			<div class="title">
+				<h6 class="title is-4">Historique:</h6>
+			</div>
+			<table class="table1">
+				<tr>
+					<th><h2>Nom de la bière:</h2></th>
+					<th><h2>Vos derniers votes:</h2></th>
+					<th><h2>Votre ajout:</h2></th>
+					<th><h2>Votre commentaire:</h2></th>
+				</tr>
+				{{#table_html1}}
+					<tr>
+						<div>
+							<th><h3><a href='/beer_description?name={{beer_name}}'>{{beer_name}}</a></h3></th>
+							<th><h3>{{beer_note}}</h3></th>
+							<th><h3>{{add}}</h3></th>
+							<th><h3>{{commentaire}}</h3></th>
+
+
+						</div>
+					</tr>
+				{{/table_html1}}		
+			</table>
+		</div>
+		<!-- boddy -->
+
+	</body>
+</html>

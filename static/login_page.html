@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> LouvainLaChoppe </title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"/>
+		<link rel="stylesheet" href="css\login_page.css"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<!-- CSS -->
+
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+		<!-- Font -->
+
+	</head>
+	<body>
+		<!-- header -->
+		<div class="block">
+			<header class="header">
+				<!-- logo -->
+				<div class="logo">
+					<a href='/' class="header-logo">
+						Louvain-La-Choppe
+					</a>
+				</div>
+				<!-- logo -->
+				
+				
+				<div class="header-menu">
+					<!-- search -->
+					<div class="search">
+						<form  method="get" action="/search">
+							<input type="search" id="search" name="search" placeholder=" 🔍  Rechercher ..."/>
+						</form>
+					</div>
+					<!-- search -->
+				</div>
+			</header>	
+		</div>
+		<!-- header -->
+
+		<!-- banner -->
+		<div class="block">
+			<div class="banner">
+				<img src="img\background.jpg" alt="background" class="banner-img">
+			</div>
+		</div>
+		<!-- banner -->
+
+		<!-- boddy -->
+		<div class="container pad " style="margin-top: 1em;">
+			<!-- Connection -->
+		 <div class="row">
+            <div class="col" style="padding=0.5em;">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Déjà Inscrit ?</h2>
+
+                        <form method="POST"	action="Connect">
+                        	<!-- Username -->
+	                        <div class="form-group">
+	                        	<small id="other_err" class="form-text text-muted error">{{other_error}}</small>
+	                            <label for="pseudo" class="col-form-label">Nom d'utilisateur</label>
+	                            <input type="text" name="pseudo" class="form-control" id="pseudo" placeholder="Nom d'utilisateur" required>
+	                            <small id="username_help" class="form-text text-muted error">{{username_error}}</small>
+	                        </div>
+
+	                        <!-- Password -->
+	                        <div class="form-group">
+	                        	<a class="float-right" href="/ResetPassword">Oublié?</a>
+	                            <label for="password" class="col-form-label">Mot de Passe</label>
+	                            <input type="password" name="mdp" class="form-control" id="password" placeholder="Mot de Passe" required>
+	                            <small id="password_help" class="form-text text-muted error">{{passw_error}}</small>
+	                        </div>
+	                        
+	                        <!-- Submit -->
+	                        <div class="form-group">
+	                        	<button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+	                        </div>
+
+                        </form>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inscription -->
+            <div class="col">
+                <div class="card"> 
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Inscription</h2>
+                        <form method="POST" action="Create">
+                        	<!-- Username -->
+                        <div class="form-group">
+                            <label for="pseudo" class="col-form-label">Nom d'utilisateur</label>
+                            <input type="text" name="user" class="form-control" id="pseudo2" placeholder="Nom d'utilisateur" required>
+                            <small id="username_help" class="form-text text-muted error">{{user_error}}</small>
+                        </div>
+
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="nomcomplet" class="col-form-label">Nom Complet</label>
+                            <input type="text" name="nomcomplet" class="form-control" id="nomcomplet" placeholder="Nijssen Siegfried" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email" class="col-form-label">Adresse email</label>
+                            <input type="text" name="mail" class="form-control" id="mail" placeholder="exemple@louvainlachoppe.be" required>
+                            <small id="mail_help" class="form-text text-muted error">{{mail_error}}</small>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Mot de Passe</label>
+                            <input type="password" name="mdp2" class="form-control" id="password" placeholder="Mot de Passe" required>
+                            <small id="password_help" class="form-text text-muted error">{{password_error}}</small>
+                        </div>
+
+                        <!-- Password Check -->
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Mot de Passe</label>
+                            <input type="password" name="check_mdp2" class="form-control" id="password" placeholder="Repetez" required>
+                            <small id="password_help2" class="form-text text-muted error">{{checkPassword_error}}</small>
+                        </div>
+
+                        <!-- Terms & Conditions checkbox -->
+                        <div class="form-group">
+                        	<div class="checkbox custom-control custom-checkbox">
+                        		<input type="checkbox" class="custom-control-input" name="checkbox" id="defaultUnchecked">
+                        		<label class="custom-control-label" for="defaultUnchecked">J'ai lu et j'accepte les Termes et conditions d'utilisation de la platflorme Louvain-La-Choppe
+                        		</label>
+                        	</div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="form-group">
+                        	<button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+		</div>
+
+		
+                
+            
+        </div>
+        <!-- boddy -->
+        
+	</body>
+</html>

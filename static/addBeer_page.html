@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> LouvainLaChoppe </title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"/>
+		<link rel="stylesheet" href="css\addBeer_page.css"/>
+		<!-- CSS -->
+
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+		<!-- Font -->
+
+	</head>
+	<body>
+		<!-- header -->
+		<div class="block">
+			<header class="header">
+				<!-- logo -->
+				<div class="logo">
+					<a href='/' class="header-logo">
+						Louvain-La-Choppe
+					</a>
+				</div>
+				<!-- logo -->
+				
+				<div class="header-menu">
+					<!-- search -->
+					<div class="search">
+						<form  method="get" action="/search">
+							<input type="search" id="search" name="search" placeholder=" 🔍  Rechercher ..."/>
+						</form>
+					</div>
+					<!-- search -->
+					<!-- connexion -->
+					<form class="connexion" id="con" method="get" action="connexion">
+						<a href="javascript:{}" onclick="document.getElementById('con').submit();">
+							{{connexion}}
+						</a>
+					</form>
+					<!-- connexion -->
+					<!-- pseudo -->
+					<div class="pseudo">
+						<a href="profil_page"><h3>{{pseudo_user}}</h3></a>
+					</div>
+					<!-- pseudo -->
+				</div>
+			</header>	
+		</div>
+		<!-- header -->
+
+		<!-- banner -->
+		<div class="block">
+			<div class="banner">
+				<!-- background -->
+				<img src="img\background.jpg" alt="background" class="banner-img">
+				<!-- background -->
+			</div>
+		</div>
+		<!-- banner -->
+
+		<!-- boddy -->
+		<div class="beer">
+			<form method="get" action="add_beer">
+				<h1 style="text-align: center"><b>Ajouter une bière</b></h1>
+
+				<!-- Nom de la bière -->
+				<div class="beer_name">
+					<label for="beer_name" ><b>Nom de votre bière*</b></label>
+					<input type="text" maxlength="35" name="beer_name" placeholder="Nom" id="beer_name" required>
+					<div class="exist">{{exist}}</div>
+					<br>
+				</div>
+				<!-- Nom de la bière -->
+					
+				<!-- Type de la bière -->
+				<div class="beer_type">
+					<label for="beer_type"><b>Type de bière*</b></label>
+						<select name="beer_type" id="beer_type" required>
+							<option value="Blonde">Blonde</option>
+							<option value="Brune">Brune</option>
+							<option value="Ambrée">Ambrée</option>
+							<option value="Kriek">Kriek</option>
+							<option value="Stout">Stout</option>
+							<option value="Pils">Pils</option>
+						</select>
+				</div>
+				<!-- Type de la bière -->
+
+				<!-- Note de la bière -->
+				<div class="beer_note">
+					<label for="beer_note"><b>L'avez-vous apprécié ?*</b></label>
+						<select name="beer_note" id="beer_note" required>
+							<option value= 0.0 >☆☆☆☆☆</option>
+							<option value= 1.0 >★☆☆☆☆</option>
+							<option value= 2.0 >★★☆☆☆</option>
+							<option value= 3.0 >★★★☆☆</option>
+							<option value= 4.0 >★★★★☆</option>
+							<option value= 5.0 >★★★★★</option>
+						</select>
+				</div>
+				<!-- Note de la bière -->
+
+				<!-- Degree de la bière -->
+				<div class="beer_degree">
+					<label for="beer_degree"><b>Degré d'alcool:*</b></label>
+						<select name="beer_degree" id="beer_degree" required>
+							<option value="0.0 < 5.0">0.0 < 5.0</option>
+							<option value="5.0 < 8.5">5.0 < 8.5</option>
+							<option value="8.5 < 12.5">8.5 < 12.5</option>
+						</select>
+				</div>
+				<!-- Degree de la bière -->
+				
+				<!-- Bar -->
+				<div class="beer_brasserie">
+					<b>Brasserie:*<b>
+            		<input type="text" name="beer_brasserie" required>
+				</div>
+				<!-- Bar -->
+
+				<!-- Bar -->
+				<div class="beer_bar">
+					<b>Dans quel bar l'avez vous dégustée: <h2 class="title is-6">(Louvain-la-Neuve)<b2><b>
+            		<input type="text" name="beer_bar">
+				</div>
+				<!-- Bar -->
+
+				<!-- Commentaire -->
+				<div class="beer_commentaire">
+					<label for="commentaire"><b>Commentaire:</b></label>
+					<textarea class="comment" name="beer_commentaire" rows="3" cols="80" maxlength="200" placeholder="Entrez un commentaire" id="commentary" ></textarea>
+				</div>
+				<!-- Commentaire -->
+
+				<!-- Submit -->
+				<div>
+					<input type="submit" value="Ajouter">
+				</div>
+			</form>
+		</div>
+		<!-- boddy -->
+
+	</body>
+</html>

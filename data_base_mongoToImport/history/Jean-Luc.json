@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5df21681e84b572f6c94079b"},"name":"Orval","note":"5.0","commentaire":"Très très très bonne bière, à déguster avec des amis :-)","add":"✗"}
+{"_id":{"$oid":"5df216a0e84b572f6c94079d"},"name":"Becasse","note":"0.0","commentaire":"Désobligeante","add":"✗"}
+{"_id":{"$oid":"5df21767e84b572f6c94079f"},"name":" Sierra nevada","note":"4.0","commentaire":"","add":"✓"}
+{"_id":{"$oid":"5df217b5e84b572f6c9407a2"},"name":"Leffe de noël","note":"4.0","commentaire":"A déguster après un vin chaud !","add":"✓"}
+{"_id":{"$oid":"5df218f7e84b572f6c9407a5"},"name":"Heineken","note":"3.0","commentaire":"A déguster fraiche ...","add":"✓"}

@@ -1,0 +1,167 @@
+body{
+	width: 100%;
+}
+.header{
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	background-color: #2c3e50;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
+.header .header-logo{
+	color: #FFFFFF;
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 30px;
+}
+.header .header-menu{
+	float: right;
+	text-align: right;
+	width: 85%;
+	height: 70px;
+}
+
+
+.search{
+	margin-right: 3%;
+	height: 0px;
+	margin-left: 82.5%;
+}
+.header .header-menu .connexion{
+	margin-right: 20%;
+	text-align: left;
+	float: right;
+	height: 0px;
+	position: relative;
+}
+.connexion a{
+	color: #FFFFFF;
+}
+.connexion a:hover {
+	color: #e74c3c;
+}
+
+.pseudo a h3{
+	margin-left: 0%;
+	color: #FFFFFF;
+	float: left;
+	height:0;
+}
+.pseudo a h3:hover{
+	color: #e74c3c;
+}
+#search{
+	border-radius: 40px;
+	border: 3px solid #2c3e50;
+	outline: none;
+	padding: 5px;
+	padding-left: 20px;
+	outline: none;
+}
+
+/*
+Banner
+*/
+.banner {
+	margin-top: -30px;
+}
+
+.banner .banner-img{
+	position: fixed;
+}
+
+/*
+Boddy
+*/
+.beer h1{
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 25px;
+}
+.beer label{
+	display: block;
+	padding: 0.5rem 0;
+}
+.beer textarea{
+	width: 565px;
+  	height: 150px;
+}
+
+
+.beer .commentaire textarea.comment::placeholder{
+	font-weight: 400;
+	line-height: 2em;
+	text-indent: 0.5em;
+	max-width:150px;
+
+}
+
+
+.beer input, select, textarea .btn{
+	width: 100%;
+	padding: 12px;
+	border:	none;
+	border-radius: : 4px;
+	box-sizing: border-box;
+	opacity: 0.85;
+	display: inline-block;
+	font-size: 17px;
+	line-height: 20px;
+	text-decoration: none;
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+.beer .beer_note input, select, textarea .btn{
+	width: 25%;
+	padding: 12px;
+	border:	none;
+	border-radius: : 4px;
+	box-sizing: border-box;
+	opacity: 0.85;
+	display: inline-block;
+	font-size: 17px;
+	line-height: 20px;
+	text-decoration: none;
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+.beer input:hover,
+	.btn:hover {
+ 	 opacity: 1;
+}
+.beer input[type=submit]{
+	background-color: #2c3e50;
+	color:	white;
+	cursor: pointer;
+}
+.beer input[type=submit]:hover {
+  	background-color: #2c3e78;
+}
+
+.beer form {
+	  width: 600px;
+	  padding: 1em;
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	  position: absolute;
+	  top: 85%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  background-color: #dcdde1;
+	  border-radius: 8px;
+	  margin-bottom: 10%;
+	  border: 6px solid #CCC;
+	  border-color: #2c3e50;
+}
+.beer_bar h2{
+	font-style: italic;
+}
+
+.exist{
+	color: #e74c3c;
+	font-style: italic;
+	font-family: 'Montserrat', sans-serif;
+}

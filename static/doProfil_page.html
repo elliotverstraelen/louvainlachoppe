@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> LouvainLaChoppe </title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"/>
+		<link rel="stylesheet" href="css\doProfil_page.css"/>
+		<!-- CSS -->
+
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+		<!-- Font -->
+
+	</head>
+	<body>
+		<!-- header -->
+		<div class="block">
+			<header class="header">
+				<!-- logo -->
+				<div class="logo">
+					<div class="header-logo">
+						Louvain-La-Choppe
+					</div>
+				</div>
+				<!-- logo -->
+				
+				<div class="header-menu">
+					
+					<!-- connexion -->
+					<form class="connexion" id="con" method="get" action="connexion">
+						<a href="javascript:{}" onclick="document.getElementById('con').submit();">
+							{{connexion}}
+						</a>
+					</form>
+					<!-- connexion -->
+					<!-- pseudo -->
+					<div class="pseudo">
+						<h3>{{pseudo_user}}</h3>
+					</div>
+					<!-- pseudo -->
+				</div>
+
+
+			</header>	
+		</div>
+		<!-- header -->
+
+		<!-- banner -->
+		<div class="block">
+			<div class="banner">
+				<!-- background -->
+					<img src="img\background.jpg" alt="background" class="banner-img">
+					<div class="banner-content">
+
+					<!-- spitch -->
+					<h1 class="title is-1">Une multitude de bière vous attend !</h1>
+					<!-- spitch -->
+
+				</div>
+				<!-- background -->
+			</div>
+		</div>
+		<!-- banner -->
+
+		<!-- boddy -->
+		<div class="doProfil">
+            <form method="get" action="sendProfil">
+            	<div class="alignement">
+            		<h3 class="title is-5">Profil</h3>
+
+            		<label for="pro_beer_type"><b>Type de bière recherchée:</b></label>
+            		<br>
+						<select name="pro_beer_type" id="pro_beer_type" required>
+							<option value=" "> </option>
+							<option value="Blonde">Blonde</option>
+							<option value="Brune">Brune</option>
+							<option value="Ambrée">Ambrée</option>
+							<option value="Stout">Stout</option>
+							<option value="Kriek">Kriek</option>
+							<option value="Pils">Pils</option>
+						</select>
+						<br><br> 
+
+            		<label for="pro_beer_degree"><b>Degré d'alcool recherché:</b></label>
+            		<br>
+						<select name="pro_beer_degree" id="pro_beer_degree" required>
+							<option value=" "> </option>
+							<option value="0.0 < 5.0">0.0 < 5.0</option>
+							<option value="5.0 < 8.5">5.0 < 8.5</option>
+							<option value="8.5 < 12.5">8.5 < 12.5</option>
+						</select>
+					<br><br>
+            	</div>
+            	<a class="button_Upgrade"><button>Mettre a jour</button></a>
+            	<br><br>
+            </form>
+     	</div>
+		<!-- boddy -->
+
+	</body>
+</html>

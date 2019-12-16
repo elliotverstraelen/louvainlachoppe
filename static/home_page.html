@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> LouvainLaChoppe </title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"/>
+		<link rel="stylesheet" href="css\home_page.css"/>
+		<!-- CSS -->
+
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+		<!-- Font -->
+
+		<!-- Script -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<!-- Script -->
+	</head>
+	<body>
+		<!-- header -->
+		<div class="block">
+			<header class="header">
+				<!-- logo -->
+				<div class="logo">
+					<a href='/' class="header-logo">
+						Louvain-La-Choppe
+					</a>
+				</div>
+				<!-- logo -->
+				
+				<div class="header-menu">
+					<!-- connexion -->
+					<form class="connexion" id="con" method="get" action="connexion">
+						<a href="javascript:{}" onclick="document.getElementById('con').submit();">
+							{{connexion}}
+						</a>
+					</form>
+					<!-- connexion -->
+					<!-- addBeer-button -->
+					<div class="add_beer"> 
+						<p> 
+							<a href="addBeer_page"><button>Ajouter une bière</button></a> 
+						</p> 
+					</div>
+		            <!-- addBeer-button -->
+					<!-- pseudo -->
+					<div class="pseudo">
+						<a href="profil_page"><h3>{{pseudo_user}}</h3></a>
+					</div>
+					<!-- pseudo -->
+					<!-- history -->
+					<div class="history">
+						<a href="history_page"><h3>{{history}}</h3></a>
+					</div>
+					<!-- history -->
+				</div>
+			</header>	
+		</div>
+		<!-- header -->
+
+		<!-- banner -->
+		<div class="block">
+			<div class="banner">
+				<!-- background -->
+				<img src="img\background.jpg" alt="background" class="banner-img">
+				<div class="banner-content">
+
+					<!-- spitch -->
+					<h1 class="title is-1">Votre guide des bières à travers <br> Louvain-La-Neuve</h1>
+					<!-- spitch -->
+
+					<!-- search -->
+					<div class="recherche">
+						<form  method="get" action="/search">
+							<input type="search" id="search" name="search" placeholder=" 🔍  Rechercher une bière en particulier..."/>
+						</form>
+					</div>
+					<!-- search -->
+					<!-- section: liste-->
+					<div class="list">
+						<a href="list_page"><h3><h6 class="title is-4">Liste des bières</h6></h3></a>
+					</div>
+					<!-- section: liste-->
+
+				</div>
+				<!-- background -->
+			</div>
+		</div>
+		<!-- banner -->
+		
+		
+		<!-- boddy -->
+
+		<!-- section: table-->
+		<div class="table_all">
+			<table class="table1">
+				<tr>
+					<th><h2>Nouveautés:</h2></th>
+				</tr>
+				{{#table_html1}}
+					<tr>
+						<div>
+							<th><h3><a href='/beer_description?name={{newBeer}}'>{{newBeer}}</a><div class="note_position">{{beer_note}}</div></h3></th>
+						</div>
+					</tr>
+				{{/table_html1}}		
+			</table>
+
+			<table class="table2">
+				<tr>
+					<th ><h2>{{Beerforyou}}</h2></th>
+				</tr>
+				{{#table_html2}} 
+					<tr>
+						<div>
+							<th><h3><a href="/beer_description?name={{youBeer}}">{{youBeer}}</a><div class="note_position">{{beer_note}}</div></h3></th>
+						</div>
+					</tr>
+				{{/table_html2}}		
+			</table>
+
+			<table class="table3">
+				<tr>
+					<th ><h2>Meilleures bières actuelles:</h2></th>
+				</tr>
+				{{#table_html3}}
+					<tr>
+						<div>
+							<th><h3><a href="/beer_description?name={{topBeer}}">{{topBeer}}</a><div class="note_position">{{beer_note}}</div></h3></th>
+						</div>
+					</tr>
+				{{/table_html3}}		
+			</table>
+		</div>
+		<!-- section: table-->
+		<!-- boddy -->
+	</body>
+</html>
+	

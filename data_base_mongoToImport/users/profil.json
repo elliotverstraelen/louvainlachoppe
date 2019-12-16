@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5decfc021c05511bcccbb460"},"user":"Maxime","pro_beer_type":"Ambrée","pro_beer_degree":"5.0 < 8.5","pro_beer_note":null}
+{"_id":{"$oid":"5def8f253490c60574b08d0c"},"user":"ValyyyH","pro_beer_type":"Blonde","pro_beer_degree":"5.0 < 8.5","pro_beer_note":null}
+{"_id":{"$oid":"5df2150fe84b572f6c94078e"},"user":"Elody","pro_beer_type":"Kriek","pro_beer_degree":"5.0 < 8.5","pro_beer_note":null}
+{"_id":{"$oid":"5df2165de84b572f6c940799"},"user":"Jean-Luc","pro_beer_type":"Stout","pro_beer_degree":"8.5 < 12.5","pro_beer_note":null}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> LouvainLaChoppe </title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"/>
+		<link rel="stylesheet" href="css\beerDescription_page.css"/>
+		<!-- CSS -->
+
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+		<!-- Font -->
+
+		<!-- Script -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<!-- Script -->
+
+	</head>
+	<body>
+		<!-- header -->
+		<div class="block">
+			<header class="header">
+				<!-- logo -->
+				<div class="logo">
+					<a href='/' class="header-logo">
+						Louvain-La-Choppe
+					</a>
+				</div>
+				<!-- logo -->
+				
+				<div class="header-menu">
+					<!-- search -->
+					<div class="search">
+						<form  method="get" action="/search">
+							<input type="search" id="search" name="search" placeholder=" 🔍  Rechercher ..."/>
+						</form>
+					</div>
+					<!-- search -->
+					<!-- connexion -->
+					<form class="connexion" id="con" method="get" action="connexion">
+						<a href="javascript:{}" onclick="document.getElementById('con').submit();">
+							{{connexion}}
+						</a>
+					</form>
+					<!-- connexion -->
+					<!-- pseudo -->
+					<div class="pseudo">
+						<a href="profil_page"><h3>{{pseudo_user}}</h3></a>
+					</div>
+					<!-- pseudo -->
+				</div>
+			</header>	
+		</div>
+		<!-- header -->
+
+		<!-- banner -->
+		<div class="block">
+			<div class="banner">
+				<!-- background -->
+				<img src="img\background.jpg" alt="background" class="banner-img">
+				<!-- background -->
+			</div>
+		</div>
+		<!-- banner -->
+
+		<!-- boddy -->
+		<div class="beer_description">
+				<h3 class="title is-3"> Description </h3>
+				<br><br>
+				<h1 class="title is-5">Nom:</h1> <h2 class="title is-5">{{name}}</h2>
+				<h1 class="title is-5">Type:</h1> <h2 class="title is-5">{{type}}</h2>
+				<h1 class="title is-5">Degrée d'alcool:</h1> <h2 class="title is-5">{{degree}}</h2>
+				<h1 class="title is-5">Brasserie:</h1> <h2 class="title is-5">{{brasserie}}</h2>
+				<h1 class="title is-5">Note générale:</h1> <h2 class="title is-4">{{note}}</h2>
+				<h1 class="title is-5">Lieu ou celle-ci est disponible:</h1> <h2 class="title is-5">{{bar}}</h2>
+				<br>
+		</div>
+
+		<table class="table1">
+			<tr>
+				<th><h2>Commentaires:</h2></th>
+			</tr>
+			{{#table_html1}}
+				<tr>
+					<div>
+						<th><div class="author">{{author}}:</div><h3>{{commentaire}}</h3></th>
+					</div>
+				</tr>
+			{{/table_html1}}		
+		</table>
+
+		<div class="add_com_not">
+			<form method="get" action="/add_com_note">
+
+				<input type="hidden" name="beer_name" value="{{name}}" id="beer_name">
+				<!-- Note de la bière -->
+				<label for="beer_note"><b>Avez-vous apprécié la bière <br> {{name}} ?*</b></label><br><br>
+					<select class="big" name="beer_note" id="beer_note" required>
+						<option value= 0.0 >☆☆☆☆☆</option>
+						<option value= 1.0 >★☆☆☆☆</option>
+						<option value= 2.0 >★★☆☆☆</option>
+						<option value= 3.0 >★★★☆☆</option>
+						<option value= 4.0 >★★★★☆</option>
+						<option value= 5.0 >★★★★★</option>
+					</select>
+					<br>
+				<!-- Note de la bière -->
+
+				<!-- Commentaire -->
+				<br>
+				<div class="commentaire">
+					<label for="commentaire"><b>Commentaire</b></label><br>
+					<textarea class="comment" name="commentaire" rows="3" cols="80" maxlength="200" placeholder="Entrez un commentaire" id="commentary" ></textarea>
+				</div>
+				<!-- Commentaire -->
+
+				<input type="submit" value="Ajouter">
+            </form>
+		</div>
+		<!-- boddy -->
+
+		</body>
+</html>

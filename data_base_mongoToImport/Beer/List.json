@@ -1,0 +1,8 @@
+{"_id":{"$oid":"5decfc381c05511bcccbb463"},"user":"Maxime","name":"Leffe Blonde","type":"Blonde","note":{"$numberDouble":"3.5"},"bar":"Beer Bar","brasserie":"Leffe","degree":"5.0 < 8.5","nVote":{"$numberInt":"2"}}
+{"_id":{"$oid":"5def8fcc3490c60574b08d12"},"user":"ValyyyH","name":"Orval","type":"Ambrée","note":{"$numberInt":"5"},"bar":"Beer Bar","brasserie":"Brasserie d'Orval","degree":"8.5 < 12.5","nVote":{"$numberInt":"2"}}
+{"_id":{"$oid":"5df215a8e84b572f6c940791"},"user":"Elody","name":"Becasse","type":"Kriek","note":{"$numberDouble":"1.5"},"bar":"Onlywood","brasserie":"Interbrew","degree":"0.0 < 5.0","nVote":{"$numberInt":"2"}}
+{"_id":{"$oid":"5df215d6e84b572f6c940794"},"user":"Elody","name":"Liefmans kriek","type":"Kriek","note":"4.0","bar":"","brasserie":"Liefmans","degree":"5.0 < 8.5","nVote":{"$numberInt":"1"}}
+{"_id":{"$oid":"5df21606e84b572f6c940797"},"user":"Elody","name":"St louis kriek","type":"Kriek","note":"2.0","bar":"Beer Bar","brasserie":"Van Honsebrouck","degree":"0.0 < 5.0","nVote":{"$numberInt":"1"}}
+{"_id":{"$oid":"5df21767e84b572f6c9407a1"},"user":"Jean-Luc","name":" Sierra nevada","type":"Stout","note":"4.0","bar":"","brasserie":"Sierra Nevada Brewing Co.","degree":"5.0 < 8.5","nVote":{"$numberInt":"1"}}
+{"_id":{"$oid":"5df217b5e84b572f6c9407a4"},"user":"Jean-Luc","name":"Leffe de noël","type":"Brune","note":"4.0","bar":"Beer Bar","brasserie":"Interbrew","degree":"5.0 < 8.5","nVote":{"$numberInt":"1"}}
+{"_id":{"$oid":"5df218f7e84b572f6c9407a7"},"user":"Jean-Luc","name":"Heineken","type":"Pils","note":"3.0","bar":"","brasserie":"Heineken","degree":"5.0 < 8.5","nVote":{"$numberInt":"1"}}

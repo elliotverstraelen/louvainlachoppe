@@ -1,0 +1,28 @@
+{
+  "name": "projet-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "LouvainLaChoppe.js",
+  "scripts": {
+    "dev": "nodemon LouvainLaChoppe.js",
+    "start": "node LouvainLaChoppe.js"
+  },
+  "author": "Elliot Verstraelen, Maxime Momin, Francois Monette",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "consolidate": "^0.15.1",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.3.0",
+    "hogan": "^1.0.2",
+    "mongodb": "^3.4.0",
+    "node": "^13.3.0",
+    "nodemon": "^2.0.2",
+    "password-validator": "^5.0.3"
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> LouvainLaChoppe </title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"/>
+		<link rel="stylesheet" href="css\profil_page.css"/>
+		<!-- CSS -->
+
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+		<!-- Font -->
+
+	</head>
+	<body>
+		<!-- header -->
+		<div class="block">
+			<header class="header">
+				<!-- logo -->
+				<div class="logo">
+					<a href='/' class="header-logo">
+						Louvain-La-Choppe
+					</a>
+				</div>
+				<!-- logo -->
+				
+				<div class="header-menu">
+					<!-- search -->
+					<div class="search">
+						<form  method="get" action="/search">
+							<input type="search" id="search" name="search" placeholder=" 🔍  Rechercher ..."/>
+						</form>
+					</div>
+					<!-- search -->
+					<!-- connexion -->
+					<form class="connexion" id="con" method="get" action="connexion">
+						<a href="javascript:{}" onclick="document.getElementById('con').submit();">
+							{{connexion}}
+						</a>
+					</form>
+					<!-- connexion -->
+					<!-- pseudo -->
+					<div class="pseudo">
+						<a href="profil_page"><h3>{{pseudo_user}}</h3></a>
+					</div>
+					<!-- pseudo -->
+				</div>
+			</header>	
+		</div>
+		<!-- header -->
+
+		<!-- banner -->
+		<div class="block">
+			<div class="banner">
+				<!-- background -->
+				<img src="img\background.jpg" alt="background" class="banner-img">
+				<!-- background -->
+			</div>
+		</div>
+		<!-- banner -->
+
+		<!-- boddy -->
+			<div class="profil">
+					<h3 class="title is-5">Informations</h3>
+            			Pseudo: <h8>{{profil_name}}</h8>
+            			<br><br>
+            			Adresse mail: <h8>{{profil_mail}}</h8>
+            			<br><br><br>
+            			Type de bière recherché: <h8>{{profil_beerType}}</h8>
+            			<br><br>
+            			Degré d'alcool recherché: <h8>{{profil_degree}}</h8>
+            			<br><br><br>
+            			<a href='/doProfil_page' class="button_change"><button class="btn btn-primary btn-block">Modifier mes attentes</button></a>
+            			<a href='/modifyPassword' class="button_change"><button class="btn btn-warning btn-block">Modifier mot de passe</button></a>
+
+			</div>
+		<!-- boddy -->
+
+	</body>
+</html>
